@@ -199,3 +199,6 @@ public enum Transactions {
 
 **Diagrama de uso de caso:**
 ![FlowDiagram](.github/use_case_diagram_sistema_bancario.png)
+
+**Diagrama de clases:**
+![ClassDiagram](.github/class_diagram.png)
