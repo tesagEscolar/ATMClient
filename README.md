@@ -127,7 +127,7 @@ public class OperationsView extends BaseLayout {
 ```
 Nota: Sobreescriba los metodos `btnHandler()` y `manageParams()` para dar funcionalidad a sus botones y obtener parametros en la view respectivamente. 
 
-**Agrega la View al ViewBuilder** `LoginGUI/src/ClientViews/ViewBuilder.java`
+**Agrega la View al ViewBuilder** [`ViewBuilder.java`](LoginGUI/src/ClientViews/ViewBuilder.java)
  ```java
    else if (view.name().equalsIgnoreCase("OPERATIONS")) {
       return new OperationsView(params);
@@ -187,11 +187,13 @@ public enum Transactions {
 ## Instrucciones para implementación:
 1. `git clone https://github.com/tesagEscolar/ATMClient/LoginGUI`
 2. Cambie el archivo `diamond_dogs_ch.png` bajo `/resources` por su propio logo.
-3. Adapte todos sus botones sobreescribiendo el metodo `btnHandler` en cada view, use la propiedad `operacion` para identificar cada botón.
+3. Adapte todos sus botones sobreescribiendo el metodo `btnHandler` en cada view, use la propiedad `operation` para identificar cada botón.
 4. Agregue o modifique sus operaciones agregando el metodo correspondiente en la clase `Transaction`
 5. Compile con `javac -classpath .:target/dependency/* -d . $(find . -type f -name '*.java')`
 6. Corra con `java -classpath .:target/dependency/* LoginGUI.src.ATMClient`
 
+## Repo del Servidor:
+[ATMFlaskServer](https://github.com/tesagEscolar/ATMServer)
 
 ## Diagramas:
 **Diagrama de flujo:**
@@ -201,4 +203,4 @@ public enum Transactions {
 ![FlowDiagram](.github/use_case_diagram_sistema_bancario.png)
 
 **Diagrama de clases:**
-![ClassDiagram](.github/class_diagram.png)
+<img src=".github/class_diagram.svg">
