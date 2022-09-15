@@ -37,7 +37,7 @@ toaster.info("An informational event.", "Or multiple at once");
 toaster.success("A successful event!", "Or multiple at once");
 ```
 
-**Crea tus propias Views** `LoginGUI/src/System/Transactions/ClientViews/OperationsView.java`
+**Crea tus propias Views** `LoginGUI/src/ClientViews/OperationsView.java`
 ```java
 public class OperationsView extends BaseLayout {
   String responseContext;
@@ -127,7 +127,7 @@ public class OperationsView extends BaseLayout {
 ```
 Nota: Sobreescriba los metodos `btnHandler()` y `manageParams()` para dar funcionalidad a sus botones y obtener parametros en la view respectivamente. 
 
-**Agrega la View al ViewBuilder** `LoginGUI/src/System/Transactions/ClientViews/ViewBuilder.java`
+**Agrega la View al ViewBuilder** `LoginGUI/src/ClientViews/ViewBuilder.java`
  ```java
    else if (view.name().equalsIgnoreCase("OPERATIONS")) {
       return new OperationsView(params);
