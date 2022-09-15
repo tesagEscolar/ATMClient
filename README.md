@@ -127,7 +127,7 @@ public class OperationsView extends BaseLayout {
 ```
 Nota: Sobreescriba los metodos `btnHandler()` y `manageParams()` para dar funcionalidad a sus botones y obtener parametros en la view respectivamente. 
 
-**Agrega la View al ViewBuilder** `LoginGUI/src/ClientViews/ViewBuilder.java`
+**Agrega la View al ViewBuilder** [`ViewBuilder.java`](LoginGUI/src/ClientViews/ViewBuilder.java)
  ```java
    else if (view.name().equalsIgnoreCase("OPERATIONS")) {
       return new OperationsView(params);
