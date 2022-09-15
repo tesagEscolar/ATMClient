@@ -182,10 +182,10 @@ public enum Transactions {
 }
 ```
 ## Corra una versión de prueba:
-[ATMCliente]([https://link-url-here.org](https://replit.com/@tesag/ATMClient))
+[ATMCliente](https://replit.com/@tesag/ATMClient)
 
 ## Instrucciones para implementación:
-1. `git clone https://github.com/ProductOfAmerica/LoginGUI.git`
+1. `git clone https://github.com/tesagEscolar/ATMClient/LoginGUI`
 2. Cambie el archivo `diamond_dogs_ch.png` bajo `/resources` por su propio logo.
 3. Adapte todos sus botones sobreescribiendo el metodo `btnHandler` en cada view, use la propiedad `operacion` para identificar cada botón.
 4. Agregue o modifique sus operaciones agregando el metodo correspondiente en la clase `Transaction`
