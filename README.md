@@ -37,7 +37,7 @@ toaster.info("An informational event.", "Or multiple at once");
 toaster.success("A successful event!", "Or multiple at once");
 ```
 
-**Crea tus propias Views** `LoginGUI/src/ClientViews/OperationsView.java`
+**Crea tus propias Views** [`OperationsView.java`](LoginGUI/src/ClientViews/OperationsView.java)
 ```java
 public class OperationsView extends BaseLayout {
   String responseContext;
@@ -136,7 +136,7 @@ Nota: Sobreescriba los metodos `btnHandler()` y `manageParams()` para dar funcio
 
 ## Codigo del Sistema:
 
-**Cree Operaciones:** `LoginGUI/src/System/Transactions/Deposit.java`
+**Cree Operaciones:** [`Deposit.java`](LoginGUI/src/System/Transactions/Deposit.java)
 ```java
 public class Deposit implements Operation {
 
@@ -153,7 +153,7 @@ public class Deposit implements Operation {
 }
 ```
 
-**Añada las claves de sus transacciones:** `LoginGUI/src/System/Transaction.java`
+**Añada las claves de sus transacciones:** [`Transaction.java`](LoginGUI/src/System/Transaction.java)
 ```java
  public void createAcount(){
     keys =  new String[] {"accountid", "nip"};
@@ -167,7 +167,7 @@ public class Deposit implements Operation {
     keys = new String[] {"accountid","nip", "amount"};
   }
 ```
-**Añada el nombre de su operación al enum general:** [`LoginGUI/src/System/Transactions/Transactions.java`](LoginGUI/src/System/Transactions/Transactions.java)
+**Añada el nombre de su operación al enum general:** [`Transactions.java`](LoginGUI/src/System/Transactions/Transactions.java)
 ```java
 public enum Transactions {
   ANOYMUS_DEPOSIT,
