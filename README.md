@@ -37,7 +37,7 @@ toaster.info("An informational event.", "Or multiple at once");
 toaster.success("A successful event!", "Or multiple at once");
 ```
 
-**Crea tus propias Views** [`OperationsView.java`](LoginGUI/src/ClientViews/OperationsView.java)
+**Crea tus propias Views** [`OperationsView.java`](App/src/ClientViews/OperationsView.java)
 ```java
 public class OperationsView extends BaseLayout {
   String responseContext;
@@ -127,7 +127,7 @@ public class OperationsView extends BaseLayout {
 ```
 Nota: Sobreescriba los metodos `btnHandler()` y `manageParams()` para dar funcionalidad a sus botones y obtener parametros en la view respectivamente. 
 
-**Agrega la View al ViewBuilder** [`ViewBuilder.java`](LoginGUI/src/ClientViews/ViewBuilder.java)
+**Agrega la View al ViewBuilder** [`ViewBuilder.java`](App/src/ClientViews/ViewBuilder.java)
  ```java
    else if (view.name().equalsIgnoreCase("OPERATIONS")) {
       return new OperationsView(params);
@@ -136,7 +136,7 @@ Nota: Sobreescriba los metodos `btnHandler()` y `manageParams()` para dar funcio
 
 ## Codigo del Sistema:
 
-**Cree Operaciones:** [`Deposit.java`](LoginGUI/src/System/Transactions/Deposit.java)
+**Cree Operaciones:** [`Deposit.java`](App/src/System/Transactions/Deposit.java)
 ```java
 public class Deposit implements Operation {
 
@@ -153,7 +153,7 @@ public class Deposit implements Operation {
 }
 ```
 
-**Añada las claves de sus transacciones:** [`Transaction.java`](LoginGUI/src/System/Transaction.java)
+**Añada las claves de sus transacciones:** [`Transaction.java`](App/src/System/Transaction.java)
 ```java
  public void createAcount(){
     keys =  new String[] {"accountid", "nip"};
@@ -167,7 +167,7 @@ public class Deposit implements Operation {
     keys = new String[] {"accountid","nip", "amount"};
   }
 ```
-**Añada el nombre de su operación al enum general:** [`Transactions.java`](LoginGUI/src/System/Transactions/Transactions.java)
+**Añada el nombre de su operación al enum general:** [`Transactions.java`](App/src/System/Transactions/Transactions.java)
 ```java
 public enum Transactions {
   ANOYMUS_DEPOSIT,
@@ -185,12 +185,12 @@ public enum Transactions {
 [ATMCliente](https://replit.com/@tesag/ATMClient)
 
 ## Instrucciones para implementación:
-1. `git clone https://github.com/tesagEscolar/ATMClient/LoginGUI`
+1. `git clone https://github.com/tesagEscolar/ATMClient/App`
 2. Cambie el archivo `diamond_dogs_ch.png` bajo `/resources` por su propio logo.
 3. Adapte todos sus botones sobreescribiendo el metodo `btnHandler` en cada view, use la propiedad `operation` para identificar cada botón.
 4. Agregue o modifique sus operaciones agregando el metodo correspondiente en la clase `Transaction`
 5. Compile con `javac -classpath .:target/dependency/* -d . $(find . -type f -name '*.java')`
-6. Corra con `java -classpath .:target/dependency/* LoginGUI.src.ATMClient`
+6. Corra con `java -classpath .:target/dependency/* App.src.ATMClient`
 
 ## Repo del Servidor:
 [ATMFlaskServer](https://github.com/tesagEscolar/ATMServer)
