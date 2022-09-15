@@ -167,7 +167,7 @@ public class Deposit implements Operation {
     keys = new String[] {"accountid","nip", "amount"};
   }
 ```
-**Añada el nombre de su operación al enum general:** `LoginGUI/src/System/Transactions/Transactions.java`
+**Añada el nombre de su operación al enum general:** [`LoginGUI/src/System/Transactions/Transactions.java`](LoginGUI/src/System/Transactions/Transactions.java)
 ```java
 public enum Transactions {
   ANOYMUS_DEPOSIT,
