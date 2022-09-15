@@ -1,5 +1,5 @@
 compile = "javac -classpath .:target/dependency/* -d . $(find . -type f -name '*.java')"
-run = "java -classpath .:target/dependency/* LoginGUI.src.ATMClient"
+run = "java -classpath .:target/dependency/* App.src.ATMClient"
 entrypoint = "ATMClient.java"
 hidden = ["**/*.class"]
 
